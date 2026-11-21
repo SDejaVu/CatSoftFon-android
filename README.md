@@ -36,6 +36,8 @@ Android-клиент для той же любой SIP-АТС, что и Windows
 EA:19:6F:C1:74:52:3D:CA:DF:01:E6:35:DF:68:7A:7A:FE:5D:03:1F:25:A7:06:B5:85:F8:DE:C7:9F:6E:1C:BF
 ```
 
+Версия для Windows: https://github.com/SDejaVu/CatSoftFon-windows
+
 [Политика конфиденциальности](https://sdejavu.github.io/CatSoftFon-android/privacy.html)
 
 ## Как это устроено
