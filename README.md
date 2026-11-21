@@ -4,6 +4,8 @@ Android-клиент для той же любой SIP-АТС, что и Windows
 [Linphone SDK](https://www.linphone.org/en/technical/sdk) (та же библиотека, что использует
 официальное приложение Linphone для Android).
 
+<img src="fastlane/metadata/android/ru-RU/images/phoneScreenshots/1.jpg" width="270" alt="Экран набора номера">
+
 ## Функции
 
 - Регистрация на SIP-АТС (UDP/TCP/TLS), звонки (входящие/исходящие), удержание, mute, DTMF
