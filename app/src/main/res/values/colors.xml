@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Same dark "3D" palette as the Windows client's Themes/Theme3D.xaml. -->
+    <color name="cat_window_bg">#FF20242A</color>
+    <color name="cat_panel_top">#FF3A4048</color>
+    <color name="cat_panel_bottom">#FF262B31</color>
+    <color name="cat_panel_pressed">#FF20242A</color>
+    <color name="cat_edge">#FF5A6068</color>
+    <color name="cat_edge_hover">#FF767C85</color>
+    <color name="cat_sunken_bg">#FF181B1F</color>
+
+    <color name="cat_text_primary">#FFF0F0F0</color>
+    <color name="cat_text_secondary">#FFA8AEB6</color>
+
+    <color name="cat_accent_blue">#FF3C8DFF</color>
+    <color name="cat_accent_blue_pressed">#FF2E6FD0</color>
+    <color name="cat_danger_red">#FFE53935</color>
+    <color name="cat_danger_red_pressed">#FFB3281F</color>
+
+    <color name="cat_presence_idle">#FF43A047</color>
+    <color name="cat_presence_busy">#FFE53935</color>
+    <color name="cat_presence_ringing">#FFFFB300</color>
+    <color name="cat_presence_offline">#FF6E7580</color>
+    <color name="cat_presence_unknown">#FF6E7580</color>
+</resources>

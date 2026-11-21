@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- In-call panel: visible only while a call is active. -->
+    <LinearLayout
+        android:id="@+id/inCallPanel"
+        style="@style/Cat.Panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/inCallRemoteText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/cat_text_primary"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/inCallStateText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/cat_text_secondary"
+            android:gravity="center"
+            android:layout_marginTop="4dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <ImageButton
+                android:id="@+id/muteButton"
+                style="@style/Cat.Button3D"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_margin="8dp"
+                android:contentDescription="@string/mute_button"
+                android:src="@drawable/ic_mic" />
+
+            <ImageButton
+                android:id="@+id/speakerButton"
+                style="@style/Cat.Button3D"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_margin="8dp"
+                android:contentDescription="@string/speaker_button"
+                android:src="@drawable/ic_volume_off" />
+
+            <ImageButton
+                android:id="@+id/holdButton"
+                style="@style/Cat.Button3D"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_margin="8dp"
+                android:contentDescription="@string/hold_button"
+                android:src="@drawable/ic_pause" />
+
+            <ImageButton
+                android:id="@+id/acceptButton"
+                style="@style/Cat.CallButton"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_margin="8dp"
+                android:contentDescription="@string/answer_button"
+                android:src="@drawable/ic_call"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/hangupButton"
+                style="@style/Cat.HangupButton"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_margin="8dp"
+                android:contentDescription="@string/hangup_button"
+                android:src="@drawable/ic_call_end" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/numberField"
+        style="@style/Cat.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:hint="@string/sip_username" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:columnCount="3"
+        android:rowCount="4">
+
+        <!-- 12 dialpad buttons, generated the same way for each key. Explicit textSize/
+             textStyle (Cat.Button3D itself stays unstyled on size - it's shared with much
+             smaller buttons like mute/hold/backspace elsewhere) so each digit reads as a big,
+             bold keypad numeral filling most of the 64dp key, not the default ~14sp Button
+             text dwarfed by it. -->
+        <Button android:id="@+id/key1" style="@style/Cat.Button3D" android:text="1" android:textSize="28sp" android:textStyle="bold" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_margin="4dp" android:layout_width="0dp" android:layout_height="64dp"/>
+        <Button android:id="@+id/key2" style="@style/Cat.Button3D" android:text="2" android:textSize="28sp" android:textStyle="bold" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_margin="4dp" android:layout_width="0dp" android:layout_height="64dp"/>
+        <Button android:id="@+id/key3" style="@style/Cat.Button3D" android:text="3" android:textSize="28sp" android:textStyle="bold" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_margin="4dp" android:layout_width="0dp" android:layout_height="64dp"/>
+        <Button android:id="@+id/key4" style="@style/Cat.Button3D" android:text="4" android:textSize="28sp" android:textStyle="bold" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_margin="4dp" android:layout_width="0dp" android:layout_height="64dp"/>
+        <Button android:id="@+id/key5" style="@style/Cat.Button3D" android:text="5" android:textSize="28sp" android:textStyle="bold" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_margin="4dp" android:layout_width="0dp" android:layout_height="64dp"/>
+        <Button android:id="@+id/key6" style="@style/Cat.Button3D" android:text="6" android:textSize="28sp" android:textStyle="bold" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_margin="4dp" android:layout_width="0dp" android:layout_height="64dp"/>
+        <Button android:id="@+id/key7" style="@style/Cat.Button3D" android:text="7" android:textSize="28sp" android:textStyle="bold" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_margin="4dp" android:layout_width="0dp" android:layout_height="64dp"/>
+        <Button android:id="@+id/key8" style="@style/Cat.Button3D" android:text="8" android:textSize="28sp" android:textStyle="bold" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_margin="4dp" android:layout_width="0dp" android:layout_height="64dp"/>
+        <Button android:id="@+id/key9" style="@style/Cat.Button3D" android:text="9" android:textSize="28sp" android:textStyle="bold" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_margin="4dp" android:layout_width="0dp" android:layout_height="64dp"/>
+        <Button android:id="@+id/keyStar" style="@style/Cat.Button3D" android:text="*" android:textSize="28sp" android:textStyle="bold" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_margin="4dp" android:layout_width="0dp" android:layout_height="64dp"/>
+        <Button android:id="@+id/key0" style="@style/Cat.Button3D" android:text="0" android:textSize="28sp" android:textStyle="bold" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_margin="4dp" android:layout_width="0dp" android:layout_height="64dp"/>
+        <Button android:id="@+id/keyHash" style="@style/Cat.Button3D" android:text="#" android:textSize="28sp" android:textStyle="bold" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_margin="4dp" android:layout_width="0dp" android:layout_height="64dp"/>
+    </GridLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <ImageButton
+            android:id="@+id/backspaceButton"
+            style="@style/Cat.Button3D"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/delete"
+            android:src="@drawable/ic_backspace" />
+
+        <ImageButton
+            android:id="@+id/callButton"
+            style="@style/Cat.CallButton"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/call_button"
+            android:src="@drawable/ic_call" />
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>

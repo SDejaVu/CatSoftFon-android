@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Custom TabLayout tab content for one line in MainActivity's line switcher: a small
+     registration-state dot (same drawables as the per-contact presence dot) plus the line's
+     label ("Линия 1" or its configured display name). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="4dp">
+
+    <View
+        android:id="@+id/lineDot"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@drawable/presence_dot_offline" />
+
+    <TextView
+        android:id="@+id/lineLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:textColor="@color/cat_text_primary"
+        android:textSize="13sp" />
+
+</LinearLayout>

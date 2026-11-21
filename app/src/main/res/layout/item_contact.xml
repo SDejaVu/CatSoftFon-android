@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="14dp"
+    android:background="?android:attr/selectableItemBackground">
+
+    <View
+        android:id="@+id/presenceDot"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:background="@drawable/presence_dot_offline" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="14dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/contactName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cat_text_primary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/contactNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cat_text_secondary"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/callContactButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@null"
+        android:contentDescription="@string/call_button"
+        android:src="@drawable/ic_call" />
+</LinearLayout>

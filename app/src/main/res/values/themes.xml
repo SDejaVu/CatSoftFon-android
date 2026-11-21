@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Cat3D" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/cat_accent_blue</item>
+        <item name="colorPrimaryDark">@color/cat_window_bg</item>
+        <item name="colorAccent">@color/cat_accent_blue</item>
+        <item name="colorOnPrimary">@color/cat_text_primary</item>
+        <item name="android:windowBackground">@color/cat_window_bg</item>
+        <item name="android:textColorPrimary">@color/cat_text_primary</item>
+        <item name="android:textColorSecondary">@color/cat_text_secondary</item>
+        <item name="android:statusBarColor">@color/cat_window_bg</item>
+        <item name="android:navigationBarColor">@color/cat_window_bg</item>
+        <item name="android:editTextColor">@color/cat_text_primary</item>
+        <item name="android:textColorHint">@color/cat_text_secondary</item>
+    </style>
+
+    <!-- parent="" on each of these is required: a style name containing a dot (like
+         "Cat.Button3D") makes AAPT2 implicitly look for a parent style literally named
+         "Cat" (everything before the last dot) unless parent is set explicitly - and since
+         no such "Cat" style exists, that implicit lookup fails the build with "resource
+         style/Cat not found". parent="" disables that implicit lookup; these styles don't
+         need to inherit from anything anyway. -->
+    <style name="Cat.Button3D" parent="">
+        <item name="android:background">@drawable/bg_button_3d</item>
+        <item name="android:textColor">@color/cat_text_primary</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="Cat.CallButton" parent="">
+        <item name="android:background">@drawable/bg_button_accent</item>
+        <item name="android:elevation">6dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="Cat.ButtonAccentRect" parent="">
+        <item name="android:background">@drawable/bg_button_accent_rect</item>
+        <item name="android:textColor">@color/cat_text_primary</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="Cat.HangupButton" parent="">
+        <item name="android:background">@drawable/bg_button_danger</item>
+        <item name="android:elevation">6dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="Cat.EditText" parent="">
+        <item name="android:background">@drawable/bg_field_sunken</item>
+        <item name="android:textColor">@color/cat_text_primary</item>
+        <item name="android:textColorHint">@color/cat_text_secondary</item>
+    </style>
+
+    <style name="Cat.Panel" parent="">
+        <item name="android:background">@drawable/bg_panel</item>
+    </style>
+</resources>

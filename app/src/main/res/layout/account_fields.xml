@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- One account/line's own settings fields - inflated 3 times by SettingsActivity (once per
+     line), each inflation producing its own independent AccountFieldsBinding/View tree even
+     though they all share this one layout resource. Directory sync and "start on boot" are
+     per-line fields too, consistent with contacts/history being separate per line; audio
+     device preferences stay OUTSIDE this layout (in AudioSettingsActivity) since those really
+     are shared - one physical mic/speaker for the whole phone, not one per SIP account. -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <EditText android:id="@+id/displayNameField" style="@style/Cat.EditText" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/sip_display_name" android:layout_marginBottom="12dp" />
+    <EditText android:id="@+id/serverField" style="@style/Cat.EditText" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/sip_server" android:layout_marginBottom="12dp" />
+    <EditText android:id="@+id/portField" style="@style/Cat.EditText" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/sip_port" android:inputType="number" android:layout_marginBottom="12dp" />
+
+    <Spinner android:id="@+id/transportSpinner" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" />
+
+    <EditText android:id="@+id/usernameField" style="@style/Cat.EditText" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/sip_username" android:layout_marginBottom="12dp" />
+    <EditText android:id="@+id/passwordField" style="@style/Cat.EditText" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/sip_password" android:inputType="textPassword" android:layout_marginBottom="12dp" />
+    <EditText android:id="@+id/outboundProxyField" style="@style/Cat.EditText" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/sip_outbound_proxy" android:layout_marginBottom="20dp" />
+
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/cat_edge" android:layout_marginBottom="20dp" />
+
+    <EditText android:id="@+id/directorySyncUrlField" style="@style/Cat.EditText" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/directory_sync_url" android:layout_marginBottom="12dp" />
+    <CheckBox android:id="@+id/directorySyncEnabledCheck" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/directory_sync_enabled" android:textColor="@color/cat_text_primary" />
+    <EditText android:id="@+id/directorySyncIntervalField" style="@style/Cat.EditText" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/directory_sync_interval" android:inputType="number" android:layout_marginBottom="12dp" android:layout_marginTop="12dp" />
+    <Button android:id="@+id/syncNowButton" style="@style/Cat.ButtonAccentRect" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/sync_now" android:layout_marginBottom="20dp" />
+
+    <CheckBox android:id="@+id/startOnBootCheck" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/start_on_boot" android:textColor="@color/cat_text_primary" />
+
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/cat_edge" android:layout_marginTop="20dp" android:layout_marginBottom="20dp" />
+
+    <!-- Optional: lets the presence dots in Контакты tell a genuinely offline/unregistered
+         extension (grey) apart from one that's simply idle - something the SIP "dialog"
+         subscription alone cannot do (see PresenceManager's class doc comment). Host is the
+         same PBX as "Сервер АТС" above; this is a different port/login on that same server -
+         Asterisk's own ARI mini-HTTPS server, not the SIP port (FreePBX: Settings > Asterisk
+         REST Interface Users). -->
+    <CheckBox android:id="@+id/ariEnabledCheck" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ari_enabled" android:textColor="@color/cat_text_primary" android:layout_marginBottom="12dp" />
+    <EditText android:id="@+id/ariPortField" style="@style/Cat.EditText" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/ari_port" android:inputType="number" android:layout_marginBottom="12dp" />
+    <EditText android:id="@+id/ariUsernameField" style="@style/Cat.EditText" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/ari_username" android:layout_marginBottom="12dp" />
+    <EditText android:id="@+id/ariPasswordField" style="@style/Cat.EditText" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/ari_password" android:inputType="textPassword" />
+
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/cat_edge" android:layout_marginTop="20dp" android:layout_marginBottom="20dp" />
+
+    <!-- A call arriving on this line while either of these is active is declined
+         automatically - no ringing, no notification, no incoming-call screen (see
+         SipManager.shouldAutoReject). Still logged to История as a missed call. -->
+    <CheckBox android:id="@+id/dndEnabledCheck" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/dnd_enabled" android:textColor="@color/cat_text_primary" android:layout_marginBottom="12dp" />
+
+    <CheckBox android:id="@+id/nightModeEnabledCheck" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/night_mode_enabled" android:textColor="@color/cat_text_primary" android:layout_marginBottom="12dp" />
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+        <Button android:id="@+id/nightModeStartButton" style="@style/Cat.Button3D" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/night_mode_time_separator" android:textColor="@color/cat_text_primary" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" />
+        <Button android:id="@+id/nightModeEndButton" style="@style/Cat.Button3D" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" />
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>

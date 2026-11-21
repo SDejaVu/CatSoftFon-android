@@ -1,0 +1,20 @@
+<p>CatSoftFon is a free, open-source SIP softphone that connects to your own PBX (Asterisk, FreePBX or any standard SIP server). It is built on the Linphone SDK. The user interface is in Russian.</p>
+
+<p><b>Features</b></p>
+<ul>
+<li>SIP registration over UDP, TCP or TLS</li>
+<li>Up to three simultaneous lines, each with its own contacts and history</li>
+<li>Incoming and outgoing calls, hold, mute, DTMF</li>
+<li>Full-screen incoming call screen and notifications, also while in background</li>
+<li>Local address book with click-to-call</li>
+<li>Call history: incoming, outgoing, missed</li>
+<li>Busy-lamp presence (SIP dialog event package, RFC 4235), no extra PBX setup needed</li>
+<li>PBX directory sync from a CSV or vCard URL</li>
+<li>Bluetooth headset support</li>
+</ul>
+
+<p>Before use, enter your PBX address, extension and password in Settings; your telephony administrator provides them.</p>
+
+<p><b>Privacy</b>: all data (account, contacts, history) stays on the device. The app only talks to your PBX and, if directory sync is enabled, to the directory URL you set. No ads, no trackers.</p>
+
+<p>Source code (AGPLv3): https://github.com/SDejaVu/CatSoftFon-android</p>

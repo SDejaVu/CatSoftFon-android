@@ -1,0 +1,26 @@
+## CatSoftFon default rc - trimmed down from the official Linphone Android app's own
+## linphonerc_default. The actual SIP account (server/port/login/password) is written into
+## the live config at runtime by SipManager.applyAccountSettings(), not here - this file only
+## sets process-wide defaults that apply before any account exists.
+
+[sip]
+contact="CatSoftFon" <sip:catsoftfon@unknown-host>
+use_ipv6=0
+keepalive_period=30000
+sip_port=-2
+sip_tcp_port=-2
+sip_tls_port=-2
+media_encryption=none
+use_rfc2833=1
+use_info=1
+
+[net]
+download_bw=0
+upload_bw=0
+
+[video]
+automatically_accept=0
+automatically_initiate=0
+
+[misc]
+max_calls=4

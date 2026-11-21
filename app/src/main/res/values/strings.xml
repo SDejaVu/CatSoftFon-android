@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CatSoftFon</string>
+
+    <!-- Bottom navigation -->
+    <string name="tab_dialer">Звонок</string>
+    <string name="tab_contacts">Контакты</string>
+    <string name="tab_history">История</string>
+
+    <!-- Lines (up to 3 independent SIP accounts) -->
+    <string name="line_label">Линия %1$d</string>
+    <string name="line_not_configured">Линия %1$d не настроена</string>
+
+    <!-- Dialer -->
+    <string name="call_button">Позвонить</string>
+    <string name="hangup_button">Сбросить</string>
+    <string name="answer_button">Ответить</string>
+    <string name="decline_button">Отклонить</string>
+    <string name="hold_button">Удержание</string>
+    <string name="mute_button">Без звука</string>
+    <string name="speaker_button">Громкая связь</string>
+    <string name="registration_status_none">Не настроено</string>
+    <string name="registration_status_progress">Регистрация…</string>
+    <string name="registration_status_ok">На связи</string>
+    <string name="registration_status_failed">Ошибка регистрации</string>
+    <string name="registration_status_cleared">Не зарегистрирован</string>
+
+    <!-- Contacts -->
+    <string name="add_contact">Добавить контакт</string>
+    <string name="contact_name">Имя</string>
+    <string name="contact_number">Номер</string>
+    <string name="contact_subscribe_presence">Отслеживать присутствие</string>
+    <string name="save">Сохранить</string>
+    <string name="cancel">Отмена</string>
+    <string name="delete">Удалить</string>
+
+    <!-- History -->
+    <string name="clear_history">Очистить историю</string>
+    <string name="no_history">Звонков пока нет</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Настройки учётных записей</string>
+    <string name="back_button">Назад</string>
+    <string name="account_label">Аккаунт %1$d</string>
+    <string name="account_validation_error">Аккаунт %1$d: укажите как минимум сервер и внутренний номер (или оставьте оба поля пустыми, чтобы не использовать эту линию)</string>
+    <string name="allow_background_button">Разрешить работать в фоне</string>
+    <string name="allow_background_button_done">Фоновая работа разрешена ✓</string>
+    <string name="allow_background_toast_unsupported">На этой версии Android дополнительно разрешать не требуется</string>
+    <string name="audio_settings_title">Настройки звука</string>
+    <string name="sip_server">Сервер АТС</string>
+    <string name="sip_port">Порт</string>
+    <string name="sip_transport">Транспорт</string>
+    <string name="sip_username">Внутренний номер / логин</string>
+    <string name="sip_password">Пароль</string>
+    <string name="sip_display_name">Отображаемое имя</string>
+    <string name="sip_outbound_proxy">Исходящий proxy (необязательно)</string>
+    <string name="directory_sync_url">Адрес каталога АТС (CSV или vCard)</string>
+    <string name="directory_sync_enabled">Синхронизировать каталог</string>
+    <string name="directory_sync_interval">Интервал синхронизации, мин</string>
+    <string name="start_on_boot">Запускать при включении телефона</string>
+    <string name="prefer_bluetooth">Предпочитать Bluetooth-гарнитуру</string>
+    <string name="sync_now">Синхронизировать сейчас</string>
+    <string name="ari_enabled">Уточнять присутствие через ARI (АТС)</string>
+    <string name="ari_port">Порт ARI (обычно 8089)</string>
+    <string name="ari_username">Логин ARI</string>
+    <string name="ari_password">Пароль ARI</string>
+    <string name="dnd_enabled">Режим «Не беспокоить» (звонки не принимать)</string>
+    <string name="night_mode_enabled">Ночной режим (звонки не принимать по времени)</string>
+    <string name="night_mode_time_separator">–</string>
+    <string name="full_screen_intent_button">Разрешить полноэкранный экран звонка</string>
+    <string name="full_screen_intent_button_done">Полноэкранный экран звонка разрешён ✓</string>
+
+    <!-- Incoming call -->
+    <string name="incoming_call_title">Входящий звонок</string>
+    <string name="incoming_call_from">Входящий звонок: %1$s</string>
+    <string name="call_in_progress">Звонок выполняется</string>
+    <string name="keep_alive_notification_title">CatSoftFon на связи</string>
+
+    <!-- Notifications -->
+    <string name="notification_channel_incoming_call">Входящие звонки</string>
+    <string name="notification_channel_ongoing_call">Текущий звонок</string>
+</resources>

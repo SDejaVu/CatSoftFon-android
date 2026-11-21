@@ -1,0 +1,31 @@
+## CatSoftFon factory rc - trimmed down from the official Linphone Android app's own
+## linphonerc_factory (audio-only softphone: no video, no chat/LIME, no tunnel).
+
+[net]
+mtu=1300
+
+[rtp]
+accept_any_encryption=1
+
+[sip]
+guess_hostname=1
+register_only_when_network_is_up=1
+auto_net_state_mon=1
+ping_with_options=0
+
+[sound]
+disable_ringing=0
+
+[audio]
+android_disable_audio_focus_requests=1
+android_monitor_audio_devices=0
+
+[video]
+# Audio-only client - video is disabled outright.
+displaytype=MSAndroidTextureDisplay
+
+[misc]
+store_friends=0
+
+[app]
+record_aware=1

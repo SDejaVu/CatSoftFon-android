@@ -1,0 +1,19 @@
+# Android / Gradle build output
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build
+build/
+/captures
+.externalNativeBuild
+.cxx
+*.apk
+*.aab
+
+# Real signing secrets - never commit these. keystore.properties.example is the template
+# that *is* safe to commit.
+keystore.properties
+*.keystore
+*.jks

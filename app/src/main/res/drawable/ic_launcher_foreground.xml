@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The same frontal cat-face logo as the Windows client's Assets/logo.png, rendered from
+     the accepted cat_face_front.svg into a density-independent bitmap (drawable-nodpi), with
+     the face already padded to occupy ~53% x 46% of the source 1024x1024 canvas - comfortably
+     inside the adaptive icon's ~66dp safe zone once scaled into this 108dp canvas.
+
+     gravity="fill" (not "center") is required here: a <bitmap> drawable with gravity="center"
+     draws the source bitmap at its NATIVE pixel size and only centers it, it does not scale it
+     to the drawable's bounds. The source art is 1024x1024px, far bigger than the ~108dp (a few
+     hundred px) this layer actually renders at, so with gravity="center" only a small cropped
+     patch from the middle of the image (around the eyes) was ever visible - the rest fell
+     outside the rendered bounds. gravity="fill" scales the whole image down to fit, so the
+     full face (with its padding) is what shows. -->
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@drawable/ic_launcher_foreground_art"
+    android:gravity="fill" />
